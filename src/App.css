@@ -1,0 +1,153 @@
+#root {
+  width: 100%;
+  max-width: 1440px;
+  border-inline: none;
+  padding: 0 32px 48px;
+}
+
+.business-grid {
+  display: grid;
+  grid-template-columns: repeat(4, minmax(0, 1fr));
+  gap: 20px;
+  margin-top: 24px;
+}
+
+.business-card {
+  box-sizing: border-box;
+  min-width: 0;
+  min-height: 330px;
+  padding: 24px 18px;
+  border: 1px solid #d4c4a5;
+  border-radius: 24px;
+  background: #eadcc2;
+  color: #382c20;
+  color-scheme: light;
+
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  overflow-wrap: anywhere;
+}
+
+.business-card h4 {
+  margin: 0 0 8px;
+  font-size: 20px;
+  line-height: 1.25;
+  color: #30251a;
+}
+
+.business-card p {
+  font-size: 15px;
+  line-height: 1.45;
+}
+
+.business-card button {
+  margin-top: auto;
+  max-width: 100%;
+  padding: 10px 14px;
+  border: 1px solid #514332;
+  border-radius: 10px;
+  background: #514332;
+  color: #fffaf0;
+  font: inherit;
+  font-size: 14px;
+  cursor: pointer;
+  overflow-wrap: anywhere;
+}
+
+.business-card button:hover:not(:disabled) {
+  background: #392e21;
+}
+
+.business-card button:disabled {
+  background: #d5c7ae;
+  border-color: #b8a98e;
+  color: #625542;
+  cursor: not-allowed;
+}
+
+.business-card button:focus-visible {
+  outline: 3px solid #785518;
+  outline-offset: 4px;
+}
+
+@media (max-width: 1000px) {
+  .business-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+
+@media (max-width: 540px) {
+  #root { padding-inline: 16px; }
+  .business-grid { grid-template-columns: 1fr; }
+}
+
+
+.auth-form {
+  max-width: 400px;
+  margin: 24px auto;
+  display: grid;
+  gap: 18px;
+  text-align: left;
+}
+.auth-form label { display: block; margin-bottom: 6px; }
+.auth-form input {
+  box-sizing: border-box;
+  width: 100%;
+  padding: 12px;
+  border: 1px solid #a69b88;
+  border-radius: 8px;
+  font: inherit;
+}
+.auth-form button, .offline-summary button, .logout-button {
+  padding: 10px 16px;
+  border: 1px solid #a69b88;
+  border-radius: 8px;
+  font: inherit;
+  cursor: pointer;
+}
+.auth-form button:disabled { cursor: wait; opacity: .6; }
+.auth-form p { font-size: 14px; margin-top: 8px; }
+.logout-button { margin: 12px 0; }
+.message { max-width: 600px; margin: 16px auto; padding: 16px; border: 1px solid #a69b88; border-radius: 12px; }
+.error-message { color: #b42318; background: #fff0ed; }
+.offline-summary {
+  max-width: 580px;
+  margin: 20px auto;
+  padding: 20px;
+  border-radius: 18px;
+  background: #eadcc2;
+  color: #382c20;
+  color-scheme: light;
+}
+.offline-summary h3 { margin-top: 0; }
+.offline-summary button { margin-top: 14px; }
+
+.bulk-controls { border: 0; padding: 10px; margin: 0 auto 18px; }
+.bulk-controls label { display: inline-flex; align-items: center; gap: 6px; margin: 8px 14px; cursor: pointer; }
+.rewards-panel { margin: 28px 0; padding: 20px; border: 1px solid #a69b88; border-radius: 18px; }
+.rewards-panel h3 { margin-top: 0; }
+.rewards-panel button { margin-top: 12px; padding: 10px 16px; border-radius: 8px; border: 1px solid #a69b88; font: inherit; cursor: pointer; }
+.rewards-panel button:disabled { cursor: not-allowed; opacity: .65; }
+.achievement-list { margin-top: 20px; display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 16px; }
+.achievement-card { background: #eadcc2; color: #382c20;
+  color-scheme: light; padding: 18px; border-radius: 16px; }
+.achievement-card h4 { margin-top: 0; }
+
+.card-actions { display: grid; gap: 8px; width: 100%; margin-top: auto; }
+.card-actions button { width: 100%; margin-top: 0; }
+.locked-card { background: #d8cebd; border-style: dashed; }
+.achievement-filters { display: flex; justify-content: center; gap: 20px; flex-wrap: wrap; margin: 20px 0; }
+.achievement-filters select { font: inherit; padding: 6px; margin-left: 8px; border-radius: 6px; }
+.statistics-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; }
+.statistics-grid > div { padding: 16px; border: 1px solid #a69b88; border-radius: 10px; overflow-wrap: anywhere; }
+.statistics-grid dt { font-size: 14px; }
+.statistics-grid dd { margin: 8px 0 0; font-weight: bold; }
+.prestige-confirm { border: 2px solid #b18c47; padding: 18px; margin-top: 16px; border-radius: 12px; }
+.prestige-confirm button { margin-inline: 8px; }
+
+.rewards-panel > p { margin: 12px 0; }
+.achievement-card button { background: #514332; color: #fffaf0; }
+.achievement-card button:disabled { background: #d5c7ae; color: #625542; opacity: 1; }

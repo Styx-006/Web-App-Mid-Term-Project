@@ -1,0 +1,20 @@
+:root {
+  font-family: Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  color: #ececec;
+  background: #16171d;
+  color-scheme: dark;
+}
+* { box-sizing: border-box; }
+body { margin: 0; }
+#root { max-width: 1440px; width: 100%; margin: 0 auto; text-align: center; min-height: 100vh; }
+h1 { font-size: 40px; margin: 24px 0; }
+h2 { font-size: 24px; }
+h3 { font-size: 20px; }
+p { margin: 8px 0; }
+button, input, select { font: inherit; }
+button { cursor: pointer; padding: 8px 14px; border: 1px solid #a69b88; border-radius: 8px; }
+button:disabled { cursor: not-allowed; }
+button:focus-visible, input:focus-visible, select:focus-visible { outline: 3px solid #a58aff; outline-offset: 3px; }
+@media (max-width: 540px) { h1 { font-size: 32px; } }
